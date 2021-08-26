@@ -1,6 +1,6 @@
 <?php 
 
-function post_meta(){
+function millmountain_post_meta(){
 
     echo 'Posted on ';
     echo '<a href="' . get_permalink() . '">';
@@ -10,7 +10,7 @@ function post_meta(){
 
 }
 
-function readmore_link(){
+function millmountain_readmore_link(){
     echo '<a href="' . get_the_permalink() . '" title = "' . the_title_attribute(['echo' => false]) . '">';
     echo 'Read More <span class = "screen-reader-text">about ' . get_the_title() . '</span>';
     echo '</a>';
