@@ -11,7 +11,7 @@ function post_meta(){
 }
 
 function readmore_link(){
-    echo '<a href="' . get_the_permalink() . '" title = "' . the_title_attribute( ) . '">';
+    echo '<a href="' . get_the_permalink() . '" title = "' . the_title_attribute(['echo' => false]) . '">';
     echo 'Read More <span class = "screen-reader-text">about ' . get_the_title() . '</span>';
     echo '</a>';
 }
