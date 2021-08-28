@@ -16,20 +16,13 @@
         <div>
             <p> <?php the_excerpt( ); ?> </p>
         </div>
-        <div>
-            <p>
-                <a href=" <?php echo get_the_permalink() ?> "  title=" <?php the_title_attribute( ); ?> ">
-
-                    Read More <span class="screen-reader-text">about <?php the_title() ?></span>
-            
-                </a>
-            </p>
-        </div>
+        
+        <?php Mill_Mountain_Blank_readmore_link(); ?>
     <?php }?>
     <?php the_posts_pagination( );?>
 
 <?php } else { ?>
-    <p>No Posts</p>
+    <p><?php esc_html_e('No Posts.','mmdigital'); ?></p>
 <?php } ?>
 
 <?php get_footer(); ?>
