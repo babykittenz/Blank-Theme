@@ -4,8 +4,7 @@ import sass from 'gulp-sass';
 import cleanCSS from 'gulp-clean-css';
 import gulpif from 'gulp-if';
 import sourcemaps from 'gulp-sourcemaps';
-//import imagemin from 'gulp-imagemin'; //npm i gulp-imagemin@7.1.0
-
+import imagemin from 'gulp-imagemin'; //using 7.1 to prevent errors
 
 
 
@@ -17,8 +16,12 @@ const paths = {
     dest: 'dist/assets/css'
   },
   images: {
-    src: 'src/assets/images/**/*.{jpg,jpeg,png,svg,gif}',
+    src: 'src/assets/images/**/*.*',
     dest: 'dist/assets/images'
+  },
+  other: {
+    src: ['src/assets/**.*', '!src/assets/{images,js,scss}', '!src/assets/{images,js,scss}/**/*'],
+    dest: 'dist/assets'
   }
 }
 
@@ -36,8 +39,17 @@ export const styles = () => {
     .pipe(gulp.dest(paths.styles.dest));
 }
 
+export const imagesmin = () => {
 
+  return gulp.src(paths.images.src)
+      .pipe(gulpif(PRODUCTION, imagemin()))
+      .pipe(gulp.dest(paths.images.dest));
+}
 
+export const copy = () => {
+  return gulp.src(paths.other.src)
+      .pipe(gulp.dest(paths.other.dest));
+}
 
 export const watch = () => {
   gulp.watch( 'src/assets/scss/**/*.scss', styles);
