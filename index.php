@@ -17,7 +17,7 @@
             <p> <?php the_excerpt( ); ?> </p>
         </div>
         
-        <?php Mill_Mountain_Blank_readmore_link(); ?>
+        <?php mmdigital_readmore_link(); ?>
     <?php }?>
     <?php the_posts_pagination( );?>
 

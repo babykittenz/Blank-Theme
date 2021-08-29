@@ -1,6 +1,6 @@
 <?php 
 
-function Mill_Mountain_Blank_post_meta(){
+function mmdigital_post_meta(){
     /* translators: %s: Post Date*/
 
     printf(
@@ -14,12 +14,12 @@ function Mill_Mountain_Blank_post_meta(){
         esc_html__('By %s', 'mmdigital'),
         '<a href="' . esc_url( get_the_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' .  esc_html(get_the_author()) . '</a>'
     );
-    
+
     echo ' By <a href="' . esc_url( get_the_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' .  esc_html(get_the_author()) . '</a>';
 
 }
 
-function Mill_Mountain_Blank_readmore_link(){
+function mmdigital_readmore_link(){
 
    
 
