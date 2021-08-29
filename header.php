@@ -10,3 +10,13 @@
         <?php wp_head(); ?>
     </head>
     <body>
+        <header>
+
+        </header>
+
+        <a  href=   "#content"  class=  "skip-link  screen-reader-text" title="">
+            
+            <?php esc_html_e(   'Skip to content'   ,   'mmdigital'  ); ?>
+
+        </a>
+        <div id="content"   class="site-content">
