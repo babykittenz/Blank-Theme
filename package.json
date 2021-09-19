@@ -1,5 +1,5 @@
 {
-  "name": "mmdigital",
+  "name": "blank-theme",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/babykittenz/Blank-Theme.git"
   },
-  "author": "",
+  "author": "michael kidby",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/babykittenz/Blank-Theme/issues"
@@ -23,6 +23,7 @@
     "@babel/core": "^7.15.0",
     "@babel/preset-env": "^7.15.0",
     "@babel/register": "^7.15.3",
+    "babel-register": "^6.26.0",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-if": "^3.0.0",
