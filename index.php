@@ -17,12 +17,12 @@
             <p> <?php the_excerpt( ); ?> </p>
         </div>
         
-        <?php mmdigital_readmore_link(); ?>
+        <?php identitydental_readmore_link(); ?>
     <?php }?>
     <?php the_posts_pagination( );?>
 
 <?php } else { ?>
-    <p><?php esc_html_e('No Posts.','mmdigital'); ?></p>
+    <p><?php esc_html_e('No Posts.','identitydental'); ?></p>
 <?php } ?>
 
 <?php get_footer(); ?>

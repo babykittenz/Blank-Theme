@@ -10,6 +10,9 @@ import del from 'del';
 
 
 
+
+
+
 const PRODUCTION = yargs.argv.prod;
 
 const paths = {
@@ -20,6 +23,10 @@ const paths = {
   images: {
     src: 'src/assets/images/**/*.{jpg,jpeg,png,svg,gif}',
     dest: 'dist/assets/images'
+  },
+  scrips:{
+    src: 'src/assets/js/bundle.js',
+    dest: 'dist/assets/js'
   },
   other: {
     src: ['src/assets/**.*', '!src/assets/{images,js,scss}', '!src/assets/{images,js,scss}/**/*'],
@@ -63,8 +70,30 @@ export const copy = () => {
       .pipe(gulp.dest(paths.other.dest));
 }
 
+export const scripts = () => {
+  
+  return gulp.src(path.scrips.src)
+
+      .pipe(webpack({
+        module: {
+          loaders:[
+            {
+                test: /\.js$/,
+                use: {
+                  loader: 'babel-loader',
+                  options: {
+                    presets: ['babel-preset-env']
+                  }
+                }
+          }
+        ]
+        }
+      }))
+      .pipe(gulp.dest(paths.scrips.dest));
+}
+
 export const dev = gulp.series(clean, gulp.parallel(styles, images, copy), watch);
 
 export const build = gulp.series(clean, gulp.parallel(styles, images, copy)); 
 
-// exports.default = hello;
+export default dev;

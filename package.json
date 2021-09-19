@@ -7,7 +7,8 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp",
+    "build": "gulp build --prod"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,9 @@
     "@babel/core": "^7.15.0",
     "@babel/preset-env": "^7.15.0",
     "@babel/register": "^7.15.3",
+    "babel-loader": "^8.2.2",
     "babel-register": "^6.26.0",
+    "browser-sync": "^2.27.5",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
@@ -31,7 +34,12 @@
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^5.0.0",
     "gulp-sourcemaps": "^3.0.0",
-    "sass": "^1.38.2"
+    "path": "^0.12.7",
+    "sass": "^1.38.2",
+    "webpack": "^5.53.0",
+    "webpack-dev-middleware": "^5.1.0",
+    "webpack-hot-middleware": "^2.25.1",
+    "webpack-stream": "^7.0.0"
   },
   "dependencies": {
     "yargs": "^17.1.1"

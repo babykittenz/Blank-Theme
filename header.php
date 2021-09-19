@@ -6,7 +6,7 @@
         <title>Document</title>
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" href="https://fonts.google.com/specimen/Raleway?selection.family=Raleway">
-        <title>Blank WordPress Theme | Mill Mountain Digital</title>
+        <title>Blank WordPress Theme | Identity Dental</title>
         <?php wp_head(); ?>
     </head>
     <body>
@@ -16,7 +16,7 @@
 
         <a  href=   "#content"  class=  "skip-link  screen-reader-text" title="">
             
-            <?php esc_html_e(   'Skip to content'   ,   'mmdigital'  ); ?>
+            <?php esc_html_e(   'Skip to content'   ,   'identitydental'  ); ?>
 
         </a>
         <div id="content"   class="site-content">
