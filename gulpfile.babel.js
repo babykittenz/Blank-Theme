@@ -5,6 +5,7 @@ import cleanCSS from 'gulp-clean-css';
 import gulpif from 'gulp-if';
 import sourcemaps from 'gulp-sourcemaps';
 import imagemin from 'gulp-imagemin';
+import del from 'del';
 
 
 
@@ -25,6 +26,9 @@ const paths = {
     dest: 'dist/assets'
   }
 }
+
+export const clean = (done) => del(['dist']);
+
 
 export const styles = () => {
 
@@ -48,16 +52,16 @@ export const images = () => {
 
 gulp.task("images", images);
 
-export const copy = () => {
-  return gulp.src(paths.other.src)
-      .pipe(gulp.dest(paths.other.dest));
-}
-
 export const watch = () => {
   gulp.watch( 'src/assets/scss/**/*.scss', styles);
   gulp.watch(paths.images.src, images);
 }
 
+export const copy = () => {
+  return gulp.src(paths.other.src)
+      .pipe(gulp.dest(paths.other.dest));
+}
 
+export const build = gulp.series(clean, gulp.parallel(styles, images, copy)) 
 
 // exports.default = hello;
