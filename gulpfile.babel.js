@@ -70,27 +70,7 @@ export const copy = () => {
       .pipe(gulp.dest(paths.other.dest));
 }
 
-export const scripts = () => {
-  
-  return gulp.src(path.scrips.src)
 
-      .pipe(webpack({
-        module: {
-          loaders:[
-            {
-                test: /\.js$/,
-                use: {
-                  loader: 'babel-loader',
-                  options: {
-                    presets: ['babel-preset-env']
-                  }
-                }
-          }
-        ]
-        }
-      }))
-      .pipe(gulp.dest(paths.scrips.dest));
-}
 
 export const dev = gulp.series(clean, gulp.parallel(styles, images, copy), watch);
 
