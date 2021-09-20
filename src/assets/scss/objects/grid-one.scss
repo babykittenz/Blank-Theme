@@ -1,0 +1,31 @@
+
+
+/*--------------------------------------------------------------
+# Grids
+--------------------------------------------------------------*/
+.grid-one{
+    display: grid;
+grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+/* This is better for small screens, once min() is better supported */
+/* grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr)); */
+gap: 2rem;
+}
+
+/*--------------------------------------------------------------
+# Buttons
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# @media
+--------------------------------------------------------------*/
+
+@media only screen and (max-width: 600px){
+    .grid-one{
+
+grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+/* This is better for small screens, once min() is better supported */
+/* grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr)); */
+gap: 2rem;
+}
+}

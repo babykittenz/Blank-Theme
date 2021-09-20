@@ -1,10 +1,14 @@
-// @import './settings/';
+@import './settings/accessibility.scss';
+@import './settings/color.scss';
+@import './settings/font.scss';
+@import './settings/reset.scss';
 
 
 // @import './tools/';
 
 
-@import './generic/reset.scss';
+@import './generic/animations.scss';
+@import './generic/general.scss';
 
 
 // @import './elements';
@@ -12,7 +16,7 @@
 
 
 
-// @import './objects';
+@import './objects/grid-one.scss';
 
 
 // @import './components';
