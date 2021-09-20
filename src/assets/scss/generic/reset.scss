@@ -1,290 +1,37 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-   CSS Reset
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
 	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
 }
 
-/*
-Fonts
-*/
-
-:root{
-    
-  --smallFont: font-family: 'Poppins', sans-serif;
-  font-family: 'Poppins', sans-serif;
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
 }
-
-/*   Transitions  */
-
-
-@keyframes transitionIn {
-  
-  from{
-      
-      opacity: 0;
-     
-      
-  }
-  
-  to{
-     
-     opacity: 1;
-     
-      
-  }
-}
-
-#content{
-  animation: transitionIn 0.75s;
-
-}
-
-body {
-
-font-family: var(--smallFont);
-}
-
-body.tag-50,
-body.category-6 {
-background-color: #a7ff91;
-}
-
-h1, h2, h3, h4, h5, h6,
-.site-title {
-font-family: "Varela Round", sans-serif;
-}
-
-h1 {
-font-size: 2rem;
-}
-
-h2 {
-margin:  inherit;
-}
-
-h2.search-title {
-text-transform: capitalize;
-}
-
-a {
-
-text-decoration: none;
-}
-
-pre {
-background: #222;
-padding: 10px;
-border: 1px #777 solid;
-color: #ededed;
-font-family: monospace;
-font-size: 1rem;
-}
-
-video {
-max-width: 100%;
-}
-
-ul {
-padding-left: 0;
-
-list-style-position: outside;
-}
-
-
-
-.site-title {
-font-size: 2rem;
-font-weight: bold;
-margin: 0 0 1rem 0;
-}
-#masthead {
-position: fixed;
-
-background-color: #ffffff;
-width: 100%;
-height: 5rem;
-top: 0;
-left:0;
-z-index: 100;
-}
-
-
-
-.wp-block-cover-image.has-background-dim::before, .wp-block-cover.has-background-dim::before {
-display: none;
-}
-
-footer.site-footer {
-
-width: 80%;
-margin: 2rem auto 1rem;
-text-align: center;
-
-}
-
-.wp-image-758{
-width: 100%;
-}
-
-#content {
-
-background: #fff;
-margin-top: 6vh;
-max-width: 100%;
-border-radius: 5px;
-display: flex;
-flex-direction: column-reverse;
-position: relative;
-overflow: auto;
--ms-word-wrap: break-word;
-word-wrap: break-word;
-}
-
-.single-portfolio #content,
-.page-template-template-splash #content,
-.page-id-1096 #content,
-.category-excerpt #content,
-.tag-wordpress #content {
-width: 50%;
-max-width: 720px;
-}
-
-#content article,
-#content article div,
-#content img {
-max-width: 100%;
-}
-
-#content img {
-height: auto;
-}
-
-#primary {
-width: 100%;
-float: left;
-}
-
-
-#primary.extended,
-#primary.excerpt,
-#primary.wordpress {
-width: 100%;
-float: none;
-}
-
-article.post {
-margin-bottom: 4rem;
-}
-
-.author article.post {
-margin-bottom: 2rem;
-}
-
-.prev-posts,
-.next-posts,
-.archive article.portfolio {
-width: 45%;
-float: left;
-}
-
-.next-posts {
-text-align: right;
-float: right;
-}
-
-.archive article.portfolio:nth-child(even) {
-margin-right: 5%;
-}
-
-.form-submit input#submit,
-.button {
-border: 1px #ccc solid;
-border-radius: 0px;
-background: #fff;
-padding: 1rem 2rem;
-margin: 1rem 0;
-display: inline-block;
-}
-
-.form-submit input#submit:hover,
-.button:hover {
-cursor: pointer;
-border-color: #777;
-}
-
-
-
-
-#secondary h2 {
-font-size: 1.2rem;
-}
-
-.byline {
-color: #777;
-font-size: .8rem;
-}
-
-.byline a {
-color: #777;
-text-decoration: underline;
-display: inline-block;
-}
-
-.byline a:hover {
-color: #564A71;
-}
-
-.author-bio {
-border-bottom: 1px #ccc solid;
-padding-bottom: 1rem;
-margin-bottom: 2rem;
-}
-
-.author-bio img {
-float: left;
-}
-
