@@ -42,6 +42,9 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "normalize.css": "^8.0.1",
+    "slick-carousel": "^1.8.1",
     "yargs": "^17.1.1"
   }
 }
