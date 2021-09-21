@@ -6,6 +6,7 @@ require_once('lib/sidebars.php');
 require_once('lib/customize.php');
 require_once('template-parts/footer/info.php');
 require_once('template-parts/header/font.php');
+require_once('template-parts/content/front-page.php');
 
 
 ?>

@@ -9,7 +9,12 @@
         <title>Blank WordPress Theme | Identity Dental</title>
         <?php wp_head(); ?>
     </head>
-    <body>
+    <body <?php body_class(); ?>>
+    <a  href=   "#content"  class=  "skip-link  screen-reader-text" title="">
+            
+            <?php esc_html_e(   'Skip to content'   ,   'identitydental'  ); ?>
+
+        </a>
         <header>
             <div class="upper-bar">
                 <div><?php get_template_part( 'template-parts/header/nav' ); ?></div>
@@ -22,9 +27,5 @@
             <div>
         </header>
 
-        <a  href=   "#content"  class=  "skip-link  screen-reader-text" title="">
-            
-            <?php esc_html_e(   'Skip to content'   ,   'identitydental'  ); ?>
-
-        </a>
+      
         <div id="content"   class="site-content">

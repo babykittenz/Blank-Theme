@@ -1,7 +1,10 @@
+
+ </div> <!-- Close Content -->
 <footer>
-   <?php get_template_part( 'template-parts/footer/info' ); ?>
+   <div><p><?php get_template_part( 'template-parts/footer/info' ); ?></p></div>
+   
 </footer>
-   </div> <!-- Close Content -->
+  
    <?php wp_footer() ?>
    </body> 
 </html>
