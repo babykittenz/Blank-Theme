@@ -5,13 +5,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="stylesheet" href="https://fonts.google.com/specimen/Raleway?selection.family=Raleway">
+        <?php get_template_part( 'template-parts/header/font' ); ?>
         <title>Blank WordPress Theme | Identity Dental</title>
         <?php wp_head(); ?>
     </head>
     <body>
         <header>
+            <div class="upper-bar">
+                <div><?php get_template_part( 'template-parts/header/nav' ); ?></div>
+                <div></div>
+                <div></div>
+                <div></div>
 
+                
+
+            <div>
         </header>
 
         <a  href=   "#content"  class=  "skip-link  screen-reader-text" title="">
