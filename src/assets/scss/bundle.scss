@@ -1,26 +1,29 @@
+
+@import './settings/reset.scss';
 @import './settings/accessibility.scss';
 @import './settings/color.scss';
 @import './settings/font.scss';
-@import './settings/reset.scss';
+
 
 
 // @import './tools/';
 
 
+// @import './elements';
 @import './generic/animations.scss';
 @import './generic/general.scss';
 
 
 // @import './elements';
 
+@import './elements/button.scss';
 
-
-
+// @import './objects';
 @import './objects/grid-one.scss';
 
 
 // @import './components';
-
+@import './components/slider.scss';
 
 // @import './utils';
 

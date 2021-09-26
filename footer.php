@@ -1,6 +1,8 @@
 
+ 
+ 
  </div> <!-- Close Content -->
-<footer id="footer" role="contentinfo">
+ <footer id="footer" role="contentinfo">
    
    <?php
 
